@@ -1,0 +1,45 @@
+/*** https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth **/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/** Farve variabler **/
+
+:root {
+  --green: #27b24c;
+  --yellow: #daf93d;
+  --blue: #2d08f2;
+  --mint: #1aeb98;
+  --white: #fcfbf7;
+  --red: #ef3929;
+}
+
+/** Lenis smooth scroll **/
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
