@@ -287,7 +287,7 @@ html {
 }
 
 .hero-link:hover {
-  background-color: #b8b8b8;
+  background-color: #27b24c;
   transition: ease-in-out 0.3s;
 }
 
@@ -306,7 +306,8 @@ html {
 }
 
 .hero-image video,
-.portfolio-hero-image video {
+.portfolio-hero-image video,
+.om-mig-hero-image video {
   object-fit: cover;
   min-width: 100%;
   min-height: 100%;
@@ -320,8 +321,15 @@ html {
 }
 
 .portfolio-hero-image video {
-  min-height: 50svh;
-  max-height: 50svh;
+  min-height: 100svh;
+  max-height: 100svh;
+  top: -35%;
+}
+
+.om-mig-hero-image video {
+  min-height: 40svh;
+  max-height: 40svh;
+  top: 0;
 }
 
 .scroll_lottie {

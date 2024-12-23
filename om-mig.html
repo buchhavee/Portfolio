@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mads Buchhave - portfolie 2024">
+
+    <title>Forside</title>
+
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/pcs2eil.css">
+    <link rel="stylesheet" href="CSS/webfonts.css" type="text/css">
+</head>
+
+<body>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-content">
+                    <div class="navbar-menu">
+                        <a href="index.html" class="menu-item">Hjem</a>
+                        <a href="portfolio.html" class="menu-item">Portfolio</a>
+                        <a href="om-mig.html" class="menu-item active">0m mig</a>
+                    </div>
+                    <a class="menu-toggle" aria-label="Toggle menu">
+                        <span class="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-container">
+                <div class="mobile-menu-header">
+                    <a class="close-menu" aria-label="Close menu">
+                        <span class="menu-icon close-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="index.html" class="menu-item mobile active">Hjem</a>
+                    <a href="portfolio.html" class="menu-item mobile">Portfoli0</a>
+                    <a href="om-mig.html" class="menu-item mobile">Om mig</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="om-mig-hero-image">
+                <video autoplay muted loop playsinline>
+                    <source src="Video/om-mig-hero.webm" type="video/mp4">Your browser does not support the video
+                    tag.
+                </video>
+                <a href="#call_cards">
+                    <dotlottie-player src="https://lottie.host/1d956470-53f5-4c33-a33e-264099c2a106/nLzda3c7Xn.lottie"
+                        background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay
+                        class="scroll_lottie"></dotlottie-player>
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+    <footer></footer>
+
+    <script src="JS/menu.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</body>
+
+</html>
