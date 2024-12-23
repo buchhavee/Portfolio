@@ -76,7 +76,7 @@ html {
   padding: 0.4rem 1rem;
   transition: background-color 0.4s;
   position: relative;
-  font-size: 2.4rem;
+  font-size: 1.2rem;
 }
 
 .menu-item::after {
@@ -107,17 +107,6 @@ html {
 
 .mobile {
   color: var(--white);
-}
-
-.menu-item::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: var(--white);
-  transition: width 0.3s ease-out, left 0.3s ease-out;
 }
 
 .menu-item:hover::after,
@@ -155,7 +144,6 @@ html {
   width: 100%;
   background: var(--white);
   border-radius: 9px;
-  opacity: 1;
   left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
@@ -241,7 +229,8 @@ html {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  padding-block: 30svh;
+  gap: 2rem;
   color: var(--white);
   text-decoration: none;
   text-align: center;
@@ -363,7 +352,7 @@ html {
   }
 
   .hero-link {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
 
   /** navbar styling desktop **/
