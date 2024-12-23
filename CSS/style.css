@@ -128,8 +128,8 @@ html {
 
 .menu-toggle {
   position: absolute;
-  top: 1.5rem;
-  right: 1rem;
+  top: 2.4rem;
+  right: 1.6rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -141,8 +141,8 @@ html {
   right: 0;
   padding: 10px;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -260,32 +260,44 @@ html {
 
 .hero-text {
   position: absolute;
-  display: block;
+  display: flex;
   color: var(--white);
   z-index: 1;
   bottom: 20%;
   left: 10%;
+  flex-direction: column;
+  gap: 0.2rem; /* Increased from 1rem to 2rem for more spacing between rows */
+}
+
+.hero-text-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
 }
 
 .hero-text h1 {
-  font-size: 7rem;
+  font-size: 3rem;
+  transition: ease 0.5s;
 }
 
 .hero-text p {
   margin-bottom: 2rem;
-  font-size: 1.6rem;
+  font-size: 0.6rem;
+  transition: ease 0.5s;
 }
 
-.hero-links {
-  font-size: 1.6rem;
-  border: 3px solid;
-  padding-inline: 30px;
-  padding-block: 10px;
+.hero-link {
+  font-size: 0.8rem;
+  border: 1px solid;
+  padding-inline: 20px;
+  padding-block: 5px;
   border-radius: 30px;
-  transition: background-color ease 0.3s;
+  transition: ease 0.3s;
+  display: inline-block;
+  width: fit-content;
 }
 
-.hero-links:hover {
+.hero-link:hover {
   background-color: #b8b8b8;
   transition: ease-in-out 0.3s;
 }
@@ -296,16 +308,16 @@ html {
   left: 0;
   width: 100%;
   min-height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
 
 .hero-image {
-  min-height: 100svh;
   max-height: 100svh;
 }
 
-.hero-image img {
+.hero-image video,
+.portfolio-hero-image video {
   object-fit: cover;
   min-width: 100%;
   min-height: 100%;
@@ -318,15 +330,40 @@ html {
   position: absolute;
 }
 
+.portfolio-hero-image video {
+  min-height: 50svh;
+  max-height: 50svh;
+}
+
+.scroll_lottie {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  filter: invert(100%);
+}
+
 /** Media querry til desktop view **/
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   /** Tekst styling i desktop **/
 
-  h1 {
+  .hero-text h1 {
     font-weight: 700;
     font-style: italic;
-    font-size: 10rem;
+    font-size: 6rem;
+    transition: ease 0.5s;
+  }
+
+  .hero-text p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    transition: ease 0.5s;
+  }
+
+  .hero-link {
+    font-size: 1.2rem;
   }
 
   /** navbar styling desktop **/
@@ -337,7 +374,7 @@ html {
   }
 
   .navbar-content a {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .navbar-logo {
@@ -346,7 +383,7 @@ html {
 
   .navbar-menu {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   /** burger menu responsiv **/
