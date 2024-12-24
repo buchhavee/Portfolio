@@ -7,9 +7,12 @@ h1 {
 
 h2 {
   font-family: "bokor";
+  font-weight: 600;
+  font-style: normal;
 }
 
-h3 {
+h3,
+h4 {
   font-family: "input-mono", monospace;
   font-weight: 400;
   font-style: normal;
@@ -32,11 +35,16 @@ a {
 /** Baggrund **/
 
 html {
-  background: #000000 no-repeat center center fixed;
+  background: #000000 no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/** Section layout **/
+.section {
+  height: 100vh;
 }
 
 /** Styling af menu **/
@@ -255,13 +263,41 @@ html {
   bottom: 20%;
   left: 10%;
   flex-direction: column;
-  gap: 0.2rem; /* Increased from 1rem to 2rem for more spacing between rows */
 }
 
 .hero-text-heading {
   display: flex;
   flex-direction: column;
-  gap: 0rem;
+  max-height: 180px;
+}
+
+.h1-hover {
+  display: block;
+  transition: 0.5s;
+}
+
+.h1-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 48%;
+  left: 5%;
+  width: 60%;
+  height: 1%;
+  background: var(--green);
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.h1-hover:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--green);
+}
+
+.h1-hober:hover {
+  color: var(--green);
+  box-shadow: 0 0 5px var(--green);
+  text-shadow: 0 0 5px var(--green);
 }
 
 .hero-text h1 {
@@ -273,6 +309,7 @@ html {
   margin-bottom: 2rem;
   font-size: 0.6rem;
   transition: ease 0.5s;
+  transform: translateY(-100%);
 }
 
 .hero-link {
@@ -297,7 +334,7 @@ html {
   left: 0;
   width: 100%;
   min-height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--overlay-hero);
   z-index: 0;
 }
 
@@ -329,7 +366,7 @@ html {
 .om-mig-hero-image video {
   min-height: 40svh;
   max-height: 40svh;
-  top: 0;
+  top: 5svh;
 }
 
 .scroll_lottie {
@@ -339,6 +376,127 @@ html {
   transform: translateX(-50%);
   z-index: 1;
   filter: invert(100%);
+}
+
+/** Call card section layout og styling **/
+
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h3 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-family: "input-mono", monospace;
+}
+
+.typing-lottie {
+  margin-inline: auto;
+  max-width: 10%;
+  margin-block: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-content {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h3 {
+  text-align: left;
+  color: black;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.text-content p {
+  color: #666;
+}
+
+.media-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vertical-text h2 {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: "bokor";
+  color: var(--green);
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.media-content img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay til call cards */
+.overlay-cc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.card:hover .overlay-cc {
+  opacity: 1;
+}
+
+.overlay-cc p {
+  color: var(--white);
+  font-size: 1.125rem;
+  text-align: center;
+  /* border-bottom: 2px solid var(--white); */
+  background-color: var(--green);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 /** Media querry til desktop view **/
@@ -393,10 +551,9 @@ html {
     display: none;
   }
 
-  /** Hero styling **/
+  /* Call card styling */
 
-  /* .hero-text {
-    bottom: 0;
-    right: 10%;
-  } */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

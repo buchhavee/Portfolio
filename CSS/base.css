@@ -23,6 +23,9 @@ html {
   --mint: #1aeb98;
   --white: #fcfbf7;
   --red: #ef3929;
+  --black: #000010;
+  --overlay-cc: rgba(0, 0, 0, 0.75);
+  --overlay-hero: rgba(0, 0, 0, 0.2);
 }
 
 /** Lenis smooth scroll **/
