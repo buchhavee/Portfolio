@@ -85,6 +85,7 @@ html {
   transition: background-color 0.4s;
   position: relative;
   font-size: 1.2rem;
+  color: hsl(0, 0%, 70%);
 }
 
 .menu-item::after {
@@ -96,12 +97,14 @@ html {
   left: 50%;
   background-color: var(--white);
   transition: width 0.3s ease-out, left 0.3s ease-out;
+  color: hsl(0, 0%, 100%);
 }
 
 .menu-item:hover,
 .menu-item.active {
   color: var(--white);
   transition: ease-in-out 0.4s;
+  color: hsl(0, 0%, 100%);
 }
 
 .mobile .menu-item {
@@ -255,7 +258,7 @@ html {
   overflow: hidden;
 }
 
-.hero-text {
+.hero-content {
   position: absolute;
   display: flex;
   color: var(--white);
@@ -265,7 +268,7 @@ html {
   flex-direction: column;
 }
 
-.hero-text-heading {
+.hero-text {
   display: flex;
   flex-direction: column;
   max-height: 180px;
@@ -279,9 +282,9 @@ html {
 .h1-hover::before {
   content: "";
   position: absolute;
-  bottom: 48%;
-  left: 5%;
-  width: 60%;
+  bottom: 6.2rem;
+  left: 1.3rem;
+  width: 25%;
   height: 1%;
   background: var(--green);
   transition: 0.5s;
@@ -294,10 +297,9 @@ html {
   box-shadow: 0 0 15px var(--green);
 }
 
-.h1-hober:hover {
-  color: var(--green);
-  box-shadow: 0 0 5px var(--green);
-  text-shadow: 0 0 5px var(--green);
+.h1-hover:hover {
+  color: var(--white);
+  text-shadow: 0 1px 10px var(--green);
 }
 
 .hero-text h1 {
@@ -310,6 +312,7 @@ html {
   font-size: 0.6rem;
   transition: ease 0.5s;
   transform: translateY(-100%);
+  color: hsl(0, 0%, 80%);
 }
 
 .hero-link {
@@ -369,13 +372,14 @@ html {
   top: 5svh;
 }
 
-.scroll_lottie {
+.scroll-lottie {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
   filter: invert(100%);
+  transition: opacity 3s, transform 3s;
 }
 
 /** Call card section layout og styling **/
@@ -389,8 +393,16 @@ html {
 .container h3 {
   text-align: center;
   color: var(--white);
-  margin-bottom: 8rem;
+  margin-block: 4rem;
   font-family: "input-mono", monospace;
+}
+
+.container h4 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 4rem;
+  font-family: "input-mono", monospace;
+  color: hsl(0, 0%, 80%);
 }
 
 .typing-lottie {
@@ -418,7 +430,7 @@ html {
 
 .card:hover {
   transform: scale(1.02);
-  box-shadow: 10px 10px 25px var(--green);
+  box-shadow: 0px 0px 25px var(--green);
   transition: ease 0.8s;
 }
 
@@ -452,11 +464,15 @@ html {
 
 .vertical-text h2 {
   writing-mode: vertical-rl;
+  min-height: 180px;
   text-orientation: mixed;
+  text-align: center;
   font-family: "bokor";
   color: var(--green);
   font-size: 300%;
   font-weight: bold;
+  transition: transform 2s;
+  border-right: 1px solid rgba(0, 0, 0, 0.289);
 }
 
 .media-content img {
@@ -465,11 +481,16 @@ html {
   margin-right: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
-  box-shadow: 20px 20px 50px grey;
+  box-shadow: 4px 2px 100px grey;
 }
 
 .card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.01);
+}
+
+.card:hover h2 {
+  transform: scale(1.2);
+  transition: transform 1.2s;
 }
 
 /* Overlay til call cards */
@@ -504,17 +525,31 @@ html {
 
 /** Media querry til desktop view **/
 
+@media (max-width: 390px) {
+  .h1-hover::before {
+    bottom: 68%;
+    left: 7%;
+  }
+}
+
 @media (min-width: 768px) {
   /** Tekst styling i desktop **/
 
-  .hero-text h1 {
+  .hero-content h1 {
     font-weight: 700;
     font-style: italic;
     font-size: 6rem;
     transition: ease 0.5s;
   }
 
-  .hero-text p {
+  .h1-hover::before {
+    bottom: 6rem;
+    left: 3rem;
+    width: 30%;
+    height: 3px;
+  }
+
+  .hero-content p {
     margin-bottom: 2rem;
     font-size: 1rem;
     transition: ease 0.5s;
