@@ -389,7 +389,7 @@ html {
 .container h3 {
   text-align: center;
   color: var(--white);
-  margin-bottom: 1rem;
+  margin-bottom: 8rem;
   font-family: "input-mono", monospace;
 }
 
@@ -418,6 +418,8 @@ html {
 
 .card:hover {
   transform: scale(1.02);
+  box-shadow: 10px 10px 25px var(--green);
+  transition: ease 0.8s;
 }
 
 .card-content {
@@ -463,6 +465,7 @@ html {
   margin-right: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  box-shadow: 20px 20px 50px grey;
 }
 
 .card:hover img {
