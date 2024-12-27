@@ -35,18 +35,15 @@ a {
 /** Baggrund **/
 
 html {
-  background: #000000 no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #000000;
 }
 
 /** Section layout **/
 .section {
-  height: 100vh;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
 }
-
 /** Styling af menu **/
 
 .navbar {
@@ -315,7 +312,13 @@ html {
   color: hsl(0, 0%, 80%);
 }
 
-.hero-link {
+.social-links {
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
   font-size: 0.8rem;
   border: 1px solid;
   padding-inline: 20px;
@@ -326,7 +329,7 @@ html {
   width: fit-content;
 }
 
-.hero-link:hover {
+.social-link:hover {
   background-color: #27b24c;
   transition: ease-in-out 0.3s;
 }
@@ -384,10 +387,15 @@ html {
 
 /** Call card section layout og styling **/
 
+.call-cards {
+  margin-bottom: 0;
+}
+
 .container {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 .container h3 {
@@ -419,7 +427,8 @@ html {
 }
 
 .card {
-  background-color: white;
+  background-color: var(--white);
+  background-color: hsl(0, 0%, 90%);
   border-radius: 0.5rem;
   padding: 1.5rem;
   position: relative;
@@ -435,14 +444,16 @@ html {
 }
 
 .card-content {
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   position: relative;
   z-index: 1;
 }
 
 .text-content {
   flex: 1;
+  max-width: 90%;
 }
 
 .text-content h3 {
@@ -459,7 +470,7 @@ html {
 .media-content {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .vertical-text h2 {
@@ -476,12 +487,10 @@ html {
 }
 
 .media-content img {
-  width: 150px;
-  height: 150px;
-  margin-right: 10px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   transition: transform 0.3s ease;
-  box-shadow: 4px 2px 100px grey;
 }
 
 .card:hover img {
@@ -521,9 +530,72 @@ html {
   background-color: var(--green);
   border-radius: 10px;
   padding: 10px;
+  padding-inline: 20px;
 }
 
-/** Media querry til desktop view **/
+/** Footer **/
+
+.footer {
+  color: white;
+  padding: 2rem;
+}
+
+.footer-content {
+  min-height: 300px;
+  max-height: 300px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item::before {
+  content: "—";
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.contact-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #ccc;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1.5rem;
+  margin-top: 200px;
+}
+
+.copyright {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+
+/** MEDIA QUERRIES **/
+
+/** Media querry til mobile view **/
 
 @media (max-width: 390px) {
   .h1-hover::before {
@@ -536,8 +608,7 @@ html {
   /** Tekst styling i desktop **/
 
   .hero-content h1 {
-    font-weight: 700;
-    font-style: italic;
+    font-weight: 100;
     font-size: 6rem;
     transition: ease 0.5s;
   }
@@ -555,7 +626,7 @@ html {
     transition: ease 0.5s;
   }
 
-  .hero-link {
+  .social-link {
     font-size: 0.8rem;
   }
 
@@ -593,5 +664,15 @@ html {
 
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /** Footer **/
+  .footer-content {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .footer-links {
+    text-align: right;
   }
 }

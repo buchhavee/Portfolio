@@ -17,6 +17,7 @@ html {
 /** Farve variabler **/
 
 :root {
+  --background: #1c1c1c;
   --green: #27b24c;
   --yellow: #daf93d;
   --blue: #2d08f2;
