@@ -345,13 +345,8 @@ html {
   z-index: 0;
 }
 
-.hero-image {
-  max-height: 100svh;
-}
-
 .hero-image video,
-.portfolio-hero-image video,
-.om-mig-hero-image video {
+.portfolio-hero-image video {
   object-fit: cover;
   min-width: 90%;
   min-height: 100%;
@@ -364,17 +359,15 @@ html {
   position: absolute;
 }
 
+.hero-image {
+  max-height: 100svh;
+}
+
 .portfolio-hero-image video {
   top: -35%;
   min-width: 100%;
   object-fit: contain;
   scale: 1.2;
-}
-
-.om-mig-hero-image video {
-  min-height: 40svh;
-  max-height: 40svh;
-  top: 5svh;
 }
 
 .scroll-lottie {
@@ -444,7 +437,6 @@ html {
 
 .card:hover {
   transform: scale(1.02);
-  /* box-shadow: 0px 10px 10px 2px var(--green); */
   transition: ease 0.8s;
 }
 
@@ -475,7 +467,7 @@ html {
 .media-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 0.2rem;
 }
 
 .vertical-text h2 {
@@ -488,12 +480,15 @@ html {
   font-size: 300%;
   font-weight: bold;
   transition: transform 2s;
+  padding-right: 20px;
+  margin-right: 0.1rem;
   border-right: 1px solid rgba(0, 0, 0, 0.289);
 }
 
 .media-content img {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
