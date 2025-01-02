@@ -41,6 +41,10 @@ img {
 }
 
 .project h3 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  word-wrap: break-word;
+  max-width: 38svw;
   text-align: left;
 }
 
@@ -53,7 +57,7 @@ img {
 .project-image {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 25px;
   aspect-ratio: 1;
   overflow: hidden;
 }
@@ -86,9 +90,24 @@ img {
   margin-bottom: 1rem;
 }
 
+.project-heading {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.to-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: end;
+}
+
 .project-description {
   font-family: monospace;
   color: #999;
+  margin-block: 30px;
 }
 
 .view-button {
@@ -103,6 +122,65 @@ img {
 
 .view-button:hover {
   background-color: var(--green);
+}
+
+/** Link knap fra UIVerse **/
+
+.tema-link {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--clr);
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--clr);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.tema-link:hover {
+  background-color: #27b24c;
+}
+
+.tema-link:hover .button__icon-wrapper {
+  color: #27b24c;
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.tema-link:hover .button__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.tema-link:hover .button__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
 }
 
 /* Media querry til desktop */
@@ -122,6 +200,11 @@ img {
 }
 
 @media (min-width: 1024px) {
+  .project-heading a {
+    position: relative;
+    right: -30px;
+  }
+
   .container {
     max-width: 1400px;
   }
