@@ -1,0 +1,95 @@
+/** Scroll snap animation **/
+#navbar {
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.container {
+  scroll-snap-align: start;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  bottom: 50px;
+  transform: scaleX(0);
+}
+
+.container {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container > div {
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.container img {
+  width: 300px;
+  height: 400px;
+}
+
+.container h3 {
+  color: var(--green);
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 25px);
+  left: calc(50% + 120px);
+}
+
+/** Tilbage knap **/
+
+.tilbage {
+  position: fixed;
+  top: 50px;
+  display: flex;
+  height: 40px;
+  width: 150px;
+  gap: 10px;
+  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 0.3rem;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.tilbage svg {
+  transition: all 0.4s ease-in;
+  filter: invert();
+}
+
+.tilbage:hover svg {
+  transform: translateX(-5px);
+}
+
+.tilbage:hover {
+  scale: 1.02;
+}

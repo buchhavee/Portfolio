@@ -5,12 +5,10 @@ img {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   margin: 100px auto;
-}
-
-.container h3 {
-  margin-block: 2rem;
 }
 
 .hero {
@@ -24,6 +22,8 @@ img {
 }
 
 .project {
+  max-width: 95%;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -46,6 +46,7 @@ img {
   word-wrap: break-word;
   max-width: 38svw;
   text-align: left;
+  color: white;
 }
 
 .case-number {
@@ -93,7 +94,8 @@ img {
 .project-heading {
   min-width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-self: flex-start;
   justify-content: space-between;
 }
 
@@ -139,8 +141,7 @@ img {
   border-radius: 0.3rem;
   font-size: 0.9rem;
   font-weight: 400;
-  padding: 0.75rem 1.5rem;
-  padding-left: 20px;
+  padding: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -149,8 +150,8 @@ img {
 
 .button__icon-wrapper {
   flex-shrink: 0;
-  width: 25px;
-  height: 25px;
+  width: 21px;
+  height: 21px;
   position: relative;
   color: var(--clr);
   background-color: #fff;
