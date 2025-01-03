@@ -256,6 +256,7 @@ html {
 
 .hero {
   overflow: hidden;
+  max-width: 100svw;
 }
 
 .hero-content {
@@ -266,6 +267,7 @@ html {
   bottom: 20%;
   left: 10%;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .hero-text {
@@ -360,9 +362,14 @@ html {
 }
 
 .portfolio-hero-image video {
-  top: -260px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-hero-image video {
+  top: -25%;
   object-fit: contain;
-  scale: 2;
+  scale: 1;
   transition: 0.8s;
 }
 
