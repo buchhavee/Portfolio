@@ -36,6 +36,7 @@ a {
 
 html {
   background: #000000;
+  scroll-snap-type: y proximity;
 }
 
 /** Section layout **/
@@ -376,6 +377,10 @@ html {
 }
 
 /** Call card section layout og styling **/
+
+#call-cards {
+  scroll-snap-align: center;
+}
 
 .call-cards {
   margin-bottom: 0;
