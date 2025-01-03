@@ -15,16 +15,6 @@ html {
   scroll-snap-align: start;
 }
 
-.progress {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: var(--accent);
-  bottom: 50px;
-  transform: scaleX(0);
-}
-
 .container {
   height: 100vh;
   scroll-snap-align: start;
@@ -34,7 +24,7 @@ html {
   position: relative;
 }
 
-.container > div {
+.container div {
   width: 300px;
   height: 400px;
   margin: 20px;
@@ -58,6 +48,16 @@ html {
   display: inline-block;
   top: calc(50% - 25px);
   left: calc(50% + 120px);
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  bottom: 50px;
+  transform: scaleX(0);
 }
 
 /** Tilbage knap **/
