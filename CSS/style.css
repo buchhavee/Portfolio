@@ -390,36 +390,6 @@ html {
   transition: opacity 3s, transform 3s;
 }
 
-/* #navbar {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-  backdrop-filter: blur(90px);
-  -webkit-box-shadow: 0px 6px 7px 0px rgba(15, 15, 15, 0.433);
-  -moz-box-shadow: 0px 6px 7px 0px rgba(15, 15, 15, 0.437);
-  box-shadow: 0px 6px 7px 0px rgba(15, 15, 15, 0.433);
-}
-
-#mobile-menu {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-  backdrop-filter: blur(90px);
-  -webkit-box-shadow: 0px 6px 7px 0px rgba(15, 15, 15, 0.433);
-  -moz-box-shadow: 0px 6px 7px 0px rgba(15, 15, 15, 0.437);
-  box-shadow: 0px 6px 7px 0px rgba(15, 15, 15, 0.433);
-} */
-
 /** Call card section layout og styling **/
 
 #call-cards section {
@@ -532,6 +502,7 @@ html {
   position: relative;
   z-index: 1;
   height: 100%;
+  overflow: hidden;
 }
 
 .text-content {
@@ -577,7 +548,14 @@ html {
   right: 0;
   border-radius: 10px;
   object-fit: cover;
+  max-height: 180px;
   transition: transform 0.3s ease;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 0.3rem;
+  height: 180px;
 }
 
 .card:hover img {
@@ -633,6 +611,7 @@ html {
   color: white;
   padding: 2rem;
   scroll-snap-stop: normal;
+  margin-top: 200px;
 }
 
 .contact {
