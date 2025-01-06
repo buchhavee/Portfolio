@@ -4,9 +4,8 @@ img {
   display: block;
 }
 
-h4 {
-  color: white;
-  max-width: 300px;
+.navbar {
+  margin-bottom: 150px;
 }
 
 .container {
@@ -16,14 +15,57 @@ h4 {
 }
 
 .hero {
-  margin-bottom: 100px;
+  margin-block: 100px;
+  min-height: 10px;
+}
+
+.hero-text h3 {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 30px;
+  z-index: 1;
+  padding-bottom: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.hero-text h3::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: #353535;
+  height: 2px;
+  bottom: 0;
+}
+
+.hero-text h3::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: var(--green);
+  height: 2px;
+  bottom: 0;
+  animation: linje 1.5s ease-out forwards;
+}
+
+.portfolio-hero-image video {
+  top: -100px;
+  width: 100%;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
+  max-width: 560px;
+  margin-inline: auto;
+  transition: 0.5s;
 }
 
 .project {
@@ -53,14 +95,16 @@ h4 {
   font-weight: 600;
   word-wrap: break-word;
   max-width: 38svw;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
   text-align: left;
   color: white;
 }
 
 .project h4 {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: #999;
+  max-width: 300px;
+  font-style: italic;
 }
 
 .case-number {
@@ -142,6 +186,10 @@ h4 {
   background-color: var(--green);
 }
 
+footer {
+  scroll-snap-stop: normal;
+}
+
 /** Link knap fra UIVerse **/
 
 .tema-link {
@@ -210,7 +258,7 @@ h4 {
   }
 
   .projects {
-    gap: 6rem;
+    gap: 3rem;
   }
 
   .project-title {
@@ -230,6 +278,7 @@ h4 {
 
   .projects {
     gap: 4rem;
+    max-width: 100%;
   }
 
   .project {
