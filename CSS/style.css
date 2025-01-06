@@ -436,7 +436,7 @@ html {
   background-color: var(--green);
   height: 2px;
   bottom: 0;
-  animation: linje 1.5s ease-out forwards;
+  animation: linje 10s ease-out forwards;
 }
 
 .call-cards {
@@ -514,12 +514,14 @@ html {
   text-align: left;
   color: var(--white);
   font-size: 1.25rem;
-  margin: 0 0 0.5rem 0;
   z-index: 9999;
+  line-height: 1.8rem;
+  margin-bottom: 15px;
 }
 
 .text-content p {
   color: #666;
+  font-size: 0.9rem;
 }
 
 .media-content {
@@ -550,6 +552,7 @@ html {
   object-fit: cover;
   max-height: 180px;
   transition: transform 0.3s ease;
+  place-self: center;
 }
 
 .image-container {
@@ -611,7 +614,7 @@ html {
   color: white;
   padding: 2rem;
   scroll-snap-stop: normal;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 .contact {
