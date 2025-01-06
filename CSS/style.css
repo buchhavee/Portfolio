@@ -498,7 +498,7 @@ html {
 .card-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 5px;
   position: relative;
   z-index: 1;
   height: 100%;
@@ -507,13 +507,13 @@ html {
 
 .text-content {
   flex: 1;
-  max-width: 90%;
+  max-width: 170px;
 }
 
 .text-content h3 {
   text-align: left;
   color: var(--white);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   z-index: 9999;
   line-height: 1.8rem;
   margin-bottom: 15px;
@@ -573,7 +573,7 @@ html {
 /* Overlay til call cards */
 
 .container h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   max-width: 1000px;
   margin-inline: auto;
 }
