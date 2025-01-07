@@ -6,6 +6,12 @@ body {
   padding: 10px;
 }
 
+section {
+  min-height: 105svh;
+  overflow: hidden;
+  max-width: 100svw;
+}
+
 /** Scroll snap animation **/
 #navbar {
   flex-direction: row;
