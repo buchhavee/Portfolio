@@ -61,11 +61,11 @@ html {
 }
 
 .container img {
-  width: 300px;
+  width: 350px;
   height: auto;
   margin-inline: auto;
   object-fit: contain;
-  filter: brightness(80%);
+  filter: brightness(95%);
   border-radius: 0.3rem 1.5rem 0.3rem 1.5rem;
 }
 
@@ -86,9 +86,9 @@ html {
   line-height: 1.2;
   position: absolute;
   display: inline-block;
-  top: calc(40% - 25px);
-  left: calc(60% + 10px);
-  background-color: #00000067;
+  top: calc(40% - 35px);
+  left: calc(60% - 15px);
+  background-color: #74747467;
   padding: 10px;
   padding-inline: 20px;
   border-radius: 0.5rem 2rem 0.5rem 2rem;
