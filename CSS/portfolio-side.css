@@ -1,3 +1,11 @@
+body {
+  font-family: monospace;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 10px;
+}
+
 /** Scroll snap animation **/
 #navbar {
   flex-direction: row;
@@ -12,24 +20,41 @@ html {
 }
 
 .container {
-  scroll-snap-align: start;
-}
-
-.container {
-  height: 100vh;
+  height: 100svh;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   object-fit: contain;
-  overflow: hidden;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_1-1 div {
+  max-width: 200px;
+  text-align: center;
+}
+
+.grid_1-1 h5 {
+  padding: 20px;
+}
+
+.grid_1-1 p {
+  color: #999;
+}
+
+.container p {
+  font-size: 0.9rem;
+  padding: 20px;
 }
 
 .container div {
-  width: 300px;
+  width: 100svw;
   height: auto;
-  margin: 20px;
   background: #000000;
   color: white;
   overflow: hidden;
@@ -37,9 +62,11 @@ html {
 
 .container img {
   width: 300px;
-  height: 400px;
-  object-fit: cover;
+  height: auto;
+  margin-inline: auto;
+  object-fit: contain;
   filter: brightness(80%);
+  border-radius: 0.3rem 1.5rem 0.3rem 1.5rem;
 }
 
 .container h1 {
@@ -53,7 +80,7 @@ html {
 .container h3 {
   color: var(--green);
   margin: 0;
-  font-size: 60px;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: -3px;
   line-height: 1.2;
@@ -61,16 +88,32 @@ html {
   display: inline-block;
   top: calc(40% - 25px);
   left: calc(60% + 10px);
+  background-color: #00000067;
+  padding: 10px;
+  padding-inline: 20px;
+  border-radius: 0.5rem 2rem 0.5rem 2rem;
 }
 
-.progress {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: var(--accent);
-  bottom: 50px;
-  transform: scaleX(0);
+.container h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.link-tekst {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.projekt-link {
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.projekt-link:hover {
+  scale: 1.02;
+  color: var(--green);
+  transition: 0.3s;
 }
 
 /** Tilbage knap **/
@@ -105,4 +148,15 @@ html {
 
 .tilbage:hover {
   scale: 1.02;
+}
+
+@media (min-width: 768px) {
+  .container div {
+    max-width: 500px;
+  }
+
+  .grid_1-1 div {
+    max-width: 200px;
+    text-align: center;
+  }
 }

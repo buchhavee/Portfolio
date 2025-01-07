@@ -84,52 +84,136 @@
         </section>
         <section class="container">
             <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo repellat necessitatibus, quasi natus
-                    architecto quam perferendis enim quia magnam expedita minus, earum cupiditate! Modi blanditiis
-                    pariatur nobis asperiores architecto exercitationem.</p>
+                <h1>intro</h1>
+                <p>I tema 02 har jeg udviklet et responsivt website om computere. Udgangspunktet for websitet var et
+                    udleveret
+                    wireframe
+                    og layoutdiagram.
+                    Disse blev brugt til at strukturere sidens layout og indhold. Websitet består af 5 sider: Forside,
+                    min computer,
+                    opertativsystemer, komponenter og galleri.</p>
+            </div>
+        </section>
+        <section class="container">
+            <div class="text">
+                <img src="../Billeder/02web/02web3.webp" alt="">
+                <h3>#002</h3>
+                <h1>Programmerings <br> metode</h1>
+            </div>
+        </section>
+        <section class="container">
+            <div>
+                <h1>kode</h1>
+                <p>
+                    Til udviklingen af websitet har jeg anvendt HTML og CSS, hvor HTML blev brugt til strukturering og
+                    CSS til styling og
+                    layout. For at skabe en mere overskuelig kode blev CSS opdelt i to separate filer:
+                </p>
+                <div class="grid_1-1">
+                    <div>
+                        <h5>style.css</h5>
+                        <p>Indeholder styling af de visuelle elementer.</p>
+                    </div>
+                    <div>
+                        <h5>layout.css</h5>
+                        <p>Håndterer layout og den responsive strukturering.</p>
+                    </div>
+                </div>
+                <p>
+                    For at opnå en optimal brugeroplevelse på tværs af enheder benyttede jeg en "mobile-first"-tilgang.
+                    Denne tilgang
+                    sikrer, at websitet fungerer problemfrit på både mobile enheder og desktops. Dette er opnået ved
+                    brug af CSS Grid
+                    og Flexbox til fleksible layout-strukturer, samt media queries til at tilpasse designet til
+                    forskellige skærmstørrelser.
+                    <br><br>
+                    Jeg har desuden valideret både HTML- og CSS-filerne.
+                    <br><br>
+                    For at undgå, at websitet bliver indekseret af søgemaskiner, har jeg tilføjet et meta-tag:
+                    "meta name="robots" content="noindex". Dette sikrer, at websitet forbliver skjult i
+                    søgemaskinernes
+                    resultater.
+                </p>
             </div>
         </section>
         <section class="container">
             <div>
                 <img src="../Billeder/02web/02web2.webp" alt="">
-                <h3>#002</h3>
-                <h1>Program- <br>mering <br> metode</h1>
-            </div>
-        </section>
-        <section class="container">
-            <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo repellat necessitatibus, quasi natus
-                    architecto quam perferendis enim quia magnam expedita minus, earum cupiditate! Modi blanditiis
-                    pariatur nobis asperiores architecto exercitationem.</p>
-            </div>
-        </section>
-        <section class="container">
-            <div>
-                <img src="../Billeder/02web/02web3.webp" alt="">
                 <h3>#003</h3>
+                <h1>Indhold</h1>
+            </div>
+        </section>
+        <section class="container">
+            <div>
+                <h1>billeder + tekst</h1>
+                <p>Til billedbehandling og indholdsproduktion har jeg anvendt forskellige værktøjer, både til
+                    formatering og behandling.
+                    <br><br>
+                    For at optimere billederne til webbrug formaterede jeg billederne til WebP-format.
+                    <br><br>
+                    På siden <strong>min_computer.html</strong> har jeg uploadet mit eget foto og tilføjet
+                    specifikationer på min egen
+                    computer.
+                </p>
             </div>
         </section>
         <section class="container">
             <div>
                 <img src="../Billeder/02web/02web4.webp" alt="">
                 <h3>#004</h3>
+                <h1>domæne</h1>
+            </div>
+        </section>
+        <section class="container">
+            <div>
+                <h1>domæne</h1>
+                <p>
+                    Jeg har oprettet en hierarkisk mappestruktur på min computer, som gør det overskueligt at navigere
+                    til websitet.
+                    Filerne er uploadet til: <br><br>
+                    <strong>kea/02_web/01_website/website/index.html</strong>
+                    <br><br>
+                    Websitet blev uploadet til mit personlige domæne ved hjælp af FileZilla.
+                </p>
             </div>
         </section>
         <section class="container">
             <div>
                 <img src="../Billeder/02web/02web1.webp" alt="">
                 <h3>#005</h3>
+                <h1>tests</h1>
             </div>
         </section>
-        <div class="progress"></div>
+        <section class="container">
+            <div>
+                <h1>tests</h1>
+                <p>
+                    Under test har jeg anvendt forskellige metoder for at sikre, at websitet fungerer
+                    optimalt og lever op til
+                    forventningerne.
+                    <br><br>
+                    Jeg brugte udviklerværktøjer i Firefox og Chrome til fejlfinding og optimering af websitet. Disse
+                    værktøjer gav mig
+                    mulighed for at analysere koden, identificere fejl og forbedre både performance og design.
+                    <br><br>
+                    Derudover modtog jeg løbende feedback fra mine lærere og klassekamerater.
+                </p>
+            </div>
+        </section>
+        <section class="container">
+            <div>
+                <h5 class="link-tekst">Link til websitet :</h5>
+                <a href="http://madsbuchhave.dk/kea/02_web/01_website/website/" class="projekt-link">
+                    http://madsbuchhave.dk/kea/02_web/01_website/website/
+                </a>
+            </div>
+        </section>
+
     </main>
     <script src="../JS/menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
     <script type="module">
         const { animate, scroll } = window.Motion
-
-        // Progress bar representing gallery scroll
-        scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }))
 
         document.querySelectorAll(".container").forEach((section) => {
             const header = section.querySelector("h3")
