@@ -10,6 +10,7 @@ section {
   min-height: 105svh;
   overflow: hidden;
   max-width: 100svw;
+  padding: 10px;
 }
 
 /** Scroll snap animation **/
@@ -66,7 +67,7 @@ html {
 }
 
 .container img {
-  width: 350px;
+  width: 300px;
   height: auto;
   margin-inline: auto;
   object-fit: contain;
@@ -127,7 +128,12 @@ html {
 .tema5-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding-inline: 10px;
+  margin-inline: auto;
+}
+
+.tema5-grid img {
+  max-width: 250px;
+  justify-self: center;
 }
 
 .billede2 {
@@ -188,6 +194,11 @@ html {
   .grid_1-1 div {
     max-width: 200px;
     text-align: center;
+    justify-self: center;
+  }
+
+  .tema5-grid img {
+    max-width: 500px;
     justify-self: center;
   }
 
